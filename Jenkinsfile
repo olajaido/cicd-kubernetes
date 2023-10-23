@@ -98,7 +98,7 @@ pipeline {
         }
         stage('Kubernetes Deploy') {
             agent {label 'KOPS'}
-                step {
+                steps {
                     sh "helm upgrade --install --force vprofile-stack helm/vprofilecharts --set appimage=${registry}:V${BUILD_NUMBER} --namespace prod"
                 }
 
