@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        registry= "olajaido/project-kube"
+        registry= "olajaido/project"
         registryCredential= 'dockerhub'
         
     }
